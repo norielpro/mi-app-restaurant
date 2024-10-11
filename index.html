@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="otros/style.css">
+    <link rel="stylesheet" href="otros/inicio.css">
+    <link rel="stylesheet" href="otros/animate.css">
+    <link rel="stylesheet" href="otros/toastify.min.css">
+    <script src="js/dist/qrious.js"></script>
+
+</head>
+
+<body>
+<div class="container-image" id="top">
+<h1 id="t1">Inicio</h1> 
+<div id="iconos">
+<i onclick="mostrarFactura()" id="reciboFactura">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#ffffff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-receipt-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2" /><path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5" /></svg>
+</i>
+<i> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+  </svg>
+</i> 
+<i onclick="MostrardivCarrito();carroVer()"> 
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+        <path d="M17 17h-11v-14h-2" />
+        <path d="M6 5l14 1l-1 7h-13" />
+      </svg><span id="quote">0</span>
+</i> 
+</div>
+  
+</div>
+<div class="app">
+    <!--Inicio-->   
+   <div class="mostrador animate__animated animate__fadeIn" id="Inicio" >
+<div>
+   <h4 id="saludarCliente"></h4>
+
+</div>
+<!--<div class="carusel">
+    <img src="assets/platos/cerdo.webp" width="100%" alt="muestra" class="animate__animated animate__fadeIn">
+    <img src="assets/platos/res.webp" width="100%" alt="muestra" class="animate__animated animate__fadeIn">
+    <img src="assets/platos/papasfritas.webp" width="100%" alt="muestra" class="animate__animated animate__fadeIn">
+    <img src="assets/platos/arrozfrito.webp" width="100%" alt="muestra" class="animate__animated animate__fadeIn">
+    <img src="assets/platos/pollo.webp" width="100%" alt="muestra" class="animate__animated animate__fadeIn">
+    <img src="assets/platos/tostones.webp" width="100%" alt="muestra" class="animate__animated animate__fadeIn">
+
+</div>-->
+<!--reloj-->
+<div style="margin: 5px;">
+    <div class="clock-container">
+    
+        <div class="clock">
+            <div class="label"><p>Horario de hoy</p></div> 
+        <div class="time"> 
+            <span id="apertura"><i id="abre">00:00 </i> am -<i id="elcierre">00:00 </i> pm </span>
+        </div>
+          
+        </div>
+        
+    </div>
+    </div>
+    <!--fin del reloj-->
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="assets/platos/cerdo.webp" alt="Imagen 1"></div>
+        <div class="slide"><img src="assets/platos/pollo.webp" alt="Imagen 2"></div>
+        <div class="slide"><img src="assets/platos/res.webp" alt="Imagen 3"></div>
+        <!-- Agrega más imágenes según sea necesario -->
+    </div>
+    <div class="slider-texts">
+        <h2 class="slider-text">Bienvenido</h2>
+    </div>
+</div>
+
+
+    <ul id="in">
+   
+      </ul>
+    </div>
+ <!--Inicio-->
+<!--Restaurante-->   
+   <div class="mostrador animate__animated animate__fadeInRight" id="Restaurante" >
+    <div id="badgeMuestra">
+    <a href="index.html#PP" class="badge">Platos principales</a>
+    <a href="index.html#mostrarPro" class="badge">Extras</a>  
+    </div>
+
+    <h4 id="PP" style="padding: 10px;">Platos Pricipales</h4>
+   <ul id="mostrarPizza"></ul>
+   
+   <h4 style="padding: 10px;">Extras</h4>
+   <ul id="mostrarPro"></ul>
+   <div class="deabajo">
+    <p>fin del menú</p>
+   </div>
+   </div>
+<!--Restaurante-->
+<!--Mercado-->
+   <div class="mostrador animate__animated animate__fadeInRight" id="Mercado">
+   
+    <ul id="mostrarMercado">
+    </ul>
+      <div class="deabajo">
+        <p></p>
+       </div>
+    </div>
+<!--Mercado-->
+<!--Perfil-->
+ <div class="mostrador animate__animated animate__fadeInRight" id="Perfil">
+<div id="formulario">
+
+   <form id="formulario">
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre"  required>
+ <label for="telefono">Teléfono:</label>
+ <input type="number" id="telefono" name="telefono" maxlength="6" required>
+  <label for="direccion">Dirección:</label>
+ <input type="text" id="direccion" name="direccion" required>
+ <input type="button" id="guardar" onclick="datosCliente()" value="Guardar">
+</form> 
+</div>
+<div class="deabajo">
+    <p></p>
+   </div>
+           
+
+ </div>
+<!--Perfil-->
+</div>
+<!--Carrito-->
+<div id="divCarrito" class="animate__animated animate__fadeInUp">
+  
+    <div id="eleCarrito">
+    <div id="navCarrito">
+    <i onclick="OcultardivCarrito()"><svg  xmlns="http://www.w3.org/2000/svg"  width="36"  height="36"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3zm-9.387 6.21l.094 .083l2.293 2.292l2.293 -2.292a1 1 0 0 1 1.497 1.32l-.083 .094l-2.292 2.293l2.292 2.293a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.497 -1.32l.083 -.094l2.292 -2.293l-2.292 -2.293a1 1 0 0 1 1.32 -1.497z" /></svg></i>
+    <div id="imgcarrito">
+        <img src="assets/carrito.png" width="80px" alt="carrito">  
+      
+    </div>
+ 
+    <div id="tabla">
+        <table>
+            <tr>
+              <th>Productos</th>
+              <th>Precio</th>
+              <th>Uds</th>
+            </tr>
+            <tbody id="orden">
+            <tr>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            </tbody>
+            
+           
+       
+          </table>
+          
+    </div>
+    <div id="elCarrito">
+        <div id="qr">
+            <canvas id="canvas2" width="80px" height="80px"></canvas>    
+          </div>
+    </div>
+</div>
+
+  </div>
+
+</div>
+<!--Fin Carrito-->
+
+
+<!--Popup-->
+<div id="popup" class="animate__animated animate__fadeInUp">
+ 
+    <div id="productoPopup">
+      <h3 id="nP">Productos</h3>
+    <p id="dP" style="text-align: center;">---</p>   
+    <p style="text-align: center;"></p>
+    
+    <h3 id="precioA">$ <i id="precio">0</i> CUP</h3>
+    <div id="cantidad">
+        <p><span class="counter" id="menos" onclick="menos()">-</span><span class="counter" id="cantidadP">1</span>
+        <span class="counter" id="mas" onclick="mas()">+</span></p> 
+    </div>
+    <a href="#" class="agregar" id="agregara" onclick="document.getElementById('popup').style.display='none'; verificarExistencia()">Agregar al pedido</a>  
+    <a href="#" class="aguardar"  onclick="document.getElementById('popup').style.display='none'">Cerrar</a>  
+  
+</div>
+</div>
+<!--Fin Popup-->
+
+
+<nav class="navigation">
+        <ul class="nav-list">
+            <li class="active" onclick="iniciar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                    </svg>
+                    Inicio
+                </a>
+            </li>
+            <li onclick="rest()">
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-tools-kitchen-2" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" /></svg>
+                    Restaurante
+                </a>
+            </li>
+            <li onclick="mercado()">
+                <a href="#">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                    Mercado
+                </a>
+            </li>
+            <li onclick="perfil()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                    </svg>
+                    Perfil
+                </a>
+            </li>
+            <div class="active-bar"></div>
+        </ul>
+    </nav>
+<div id="noInternet">
+        <a href="#" id="noint"> Sin conexión 
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wifi-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 18l.01 0" /><path d="M9.172 15.172a4 4 0 0 1 5.656 0" /><path d="M6.343 12.343a7.963 7.963 0 0 1 3.864 -2.14m4.163 .155a7.965 7.965 0 0 1 3.287 2" /><path d="M3.515 9.515a12 12 0 0 1 3.544 -2.455m3.101 -.92a12 12 0 0 1 10.325 3.374" /><path d="M3 3l18 18" /></svg></a>
+      
+</div>
+
+<div id="load" style="display: none;">Cargando...</div> 
+ 
+<div id="factura" class="mostrador animate__animated animate__fadeInUp">
+    <i onclick="cerrarFactura()" id="close"><svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-square-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3zm-9.387 6.21l.094 .083l2.293 2.292l2.293 -2.292a1 1 0 0 1 1.497 1.32l-.083 .094l-2.292 2.293l2.292 2.293a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.497 -1.32l.083 -.094l2.292 -2.293l-2.292 -2.293a1 1 0 0 1 1.32 -1.497z" /></svg></i>
+    
+    <div id="mostrarFactura">
+
+    </div>
+</div> 
+
+<div id="cierre">
+    <a href="#" id="noint"> Cerrado
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-watch-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h5a3 3 0 0 1 3 3v5m-.89 3.132a2.99 2.99 0 0 1 -2.11 .868h-6a3 3 0 0 1 -3 -3v-6c0 -.817 .327 -1.559 .857 -2.1" /><path d="M9 18v3h6v-3" /><path d="M9 5v-2h6v3" /><path d="M3 3l18 18" /></svg></a>
+</div> 
+<script src="js/inicio.js"></script> 
+     <script src="js/panes.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/sweetalert2@11.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="otros/toastify-js.js"></script>
+    <script src="js/accesos.js"></script>    
+    <script src="js/dist/qrious.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,642 @@
+:root {
+    --bg: #F8F8FF;
+    --nav-bg: #fff;
+    --primary: #2F71D6;
+    --nav-item-color: #8F9A9E;
+    --nav-border: #8F9A9E;
+    --white: #fff;
+    --gap: 0.5rem;
+    --item-width: 5.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: var(--background);
+    scroll-behavior: smooth;
+}
+
+.navigation {
+    width: 95%;
+    
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--nav-bg);
+    box-shadow: 0px 4px 16px 0px rgba(148, 156, 169, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 156, 169, 0.15);
+    user-select: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: var(--gap);
+    position: relative;
+}
+
+.nav-list>li {
+    width: var(--item-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-list>li>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 4rem;
+    gap: 0.5rem;
+    width: 100%;
+    color: var(--nav-item-color);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list>li>a>svg {
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--nav-item-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list>li:hover>a {
+    color: var(--primary);
+}
+
+.nav-list>li:hover>a>svg {
+    stroke: var(--primary);
+}
+
+.nav-list>.active>a {
+    color: var(--primary);
+}
+
+.nav-list>.active>a>svg {
+    stroke: var(--primary);
+}
+
+.active-bar {
+    position: absolute;
+    top: -1rem;
+    min-width: var(--item-width);
+    height: 0.5rem;
+    background: var(--primary);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.nav-list li:nth-child(1).active~.active-bar {
+    transform: translatex(calc(0));
+}
+
+.nav-list li:nth-child(2).active~.active-bar {
+    transform: translatex(calc(var(--item-width) + var(--gap)));
+}
+
+.nav-list li:nth-child(3).active~.active-bar {
+    transform: translatex(calc(var(--item-width)*2 + var(--gap)*2));
+}
+
+.nav-list li:nth-child(4).active~.active-bar {
+    transform: translatex(calc(var(--item-width)*3 + var(--gap)*3));
+}
+
+#top{
+   
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center ;
+    border-radius: 0px 0px 20px 20px;
+    z-index: 99999999;
+    }
+
+    .container-image {
+        width: 300px; /* Ajusta el ancho según sea necesario */
+        height: 200px; /* Ajusta la altura según sea necesario */
+        background-image: url('assets/comida.jpg'); /* Ruta a la imagen */
+        background-size: cover; /* Otras opciones: contain, auto */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        overflow: hidden;
+       
+    }
+    
+    .container-image::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top, rgb(3, 3, 12), rgba(11, 11, 126, 0.466));
+        pointer-events: none; /* Permite interacciones con elementos debajo del degradado */
+    }
+    .container-image>h1{
+        z-index: 1;
+        color: #fff;
+        margin-top: 15px;
+    }
+    .app{
+       
+        width: 100%;
+        height: 100%;
+        margin-top: 200px;
+      
+        position: fixed;
+        overflow: scroll;
+        ;
+    }
+    #noInternet{
+       
+        text-decoration: none; 
+        position: absolute;
+        display: none;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: #fff;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      z-index: 99999999;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+    #noint{
+        text-decoration: none; 
+        display: flex;
+        text-align: center;
+       justify-items:center ;
+       align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      
+    
+    }
+    #cierre{
+        text-decoration: none; 
+        position: absolute;
+        display: none;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: #fff;
+        top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999999;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+    .mostrador{
+        display: none;
+        flex-direction: column;
+        margin: 5px;
+        
+    }
+    li{
+        list-style: none;
+    }
+    h1{
+        color: #fff;
+    }
+    #iconos{
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+    #t1{
+        margin-top: 30px;
+    }
+    #quote{
+        color: #fff;
+    }
+    #formulario{
+        width: 100%;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        overflow: scroll;
+     
+    }
+    #clienteForm1{
+        width: 80%;  
+        
+    }
+    input{ 
+        padding: 15px;
+      height: 30px;
+        border-radius: 10px;
+      border: 1px solid rgba(163, 158, 158, 0.534);
+    }
+    select{ 
+        padding: 15px;
+      height: auto;
+        border-radius: 10px;
+      border: 1px solid rgba(163, 158, 158, 0.534);
+    }
+    #divCarrito{
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        background-color: var(--bg);
+        z-index: 99999999;
+
+    }
+    #guardar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+        margin-top: 20px;
+        background-color: var(--primary);
+        color: #fff;
+    }
+    #badgeMuestra{
+        background-color:#fff;
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        margin-bottom: 10px;
+    }
+    .badge{
+        background-color: #c2c7c9;
+        width: auto;
+        height: auto;
+        padding: 10px;
+     margin: 5px;
+     border-radius: 15px;
+     text-decoration: none;
+     color: #3b3838;
+     font-size: 12px;
+     position: sticky;
+     
+
+    }
+    #nombrePrecio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding: 10px;
+    }
+    .ui{
+        display: flex;
+        flex-direction: row; 
+        animation: all 0.2ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        scroll-behavior: smooth;
+    }
+    #datamenu{
+        text-decoration: none;
+    }
+    #imgP{
+        border-radius: 15px;
+    }
+    #nProducto{
+        color: #666262;
+    }
+    #nPa{
+        color: rgb(196, 52, 52);
+    }
+    #Restaurante{
+        scroll-behavior: smooth;
+    }
+   
+    #popup{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #9dbef083;
+        backdrop-filter: blur;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      z-index: 99999999;
+       
+    }
+    #productoPopup{
+        align-content: center;
+        justify-content: center;
+        padding: 15px;
+        width: 95%;
+                height: 300px;
+                margin: 0;
+            
+                top: 45%;
+                background-color: var(--bg);
+                z-index: 99999999;
+                border-radius: 15px;
+                border: 1px solid rgba(126, 124, 124, 0.562);
+
+
+        display: flex;
+        flex-direction: column;
+
+
+
+    p{
+        font-size: 12px;
+    }       
+     a{
+        text-decoration: none;
+        border-radius: 15px;
+     } 
+    }
+    #nP{
+        background-color: #0b2e61;
+        padding: 5px;
+        color: var(--white);
+        margin-bottom: 5px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .aguardar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+        margin-top: 10px;
+        background-color:rgb(172, 165, 165);
+        color: #fff;
+    }
+    .agregar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+        margin-top: 20px;
+        background-color: var(--primary);
+        color: #fff;
+    }
+    #mostrarPro{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        justify-items: left;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    #cantidad{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: space-evenly;
+        align-items: center;
+        justify-content: center;
+    margin-top: 15px;
+        
+    }
+    .counter{
+        font-size: 20px;
+padding: 10px;
+background-color: #0b2e61;
+margin: 5px;
+border-radius: 15px;
+color: yellow;
+    }
+    #precioA{
+        text-align: center;
+        margin: 15px;
+    }
+    #precio{
+        font-style: normal;
+    }
+    
+    #divCarrito{
+        display: none;
+        justify-content: center;
+        
+        background-color:var(--bg);
+        backdrop-filter: blur;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999999;
+    }
+    #eleCarrito{
+        width: 95%;
+        background-color: var(--bg);
+    }
+    #imgcarrito{
+display: flex;
+justify-content: center;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f1e7e7;
+      }
+      #tabla{
+        display: flex;
+        align-items: start;
+        width: 100%;
+      }
+      #wa{
+        display: none;
+        background-color: var(--primary);
+        color: var(--nav-bg);
+        font-size: medium;
+        padding: 15px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: lighter;
+        width: 80%;
+        text-align: center;
+      }
+      #wa1{
+        background-color: rgb(187, 174, 174);
+        color: var(--nav-bg);
+        font-size: medium;
+        padding: 15px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: lighter;
+        width: 80%;
+        text-align: center;
+      }
+      #wa2{
+        background-color: var(--primary);
+        color: var(--nav-bg);
+        font-size: medium;
+        padding: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: lighter;
+        width: auto;
+        text-align: center;
+        border: none;
+      }
+      #wa5{
+        background-color: rgb(235, 73, 73);
+        color: var(--nav-bg);
+        font-size: medium;
+        padding: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: lighter;
+        width: auto;
+        text-align: center;
+        border: none;
+      }
+      .botones{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        padding: 5px;
+      }
+      .datosCarrito{
+        padding: 10px;
+      }
+      #mySelect{
+        padding: 8px;
+      }
+      .deabajo{
+        height: 200px;
+      }
+      #totalC{
+        background-color: red;
+        color: #fff;
+        padding: 8px;
+      }
+      #totalE{
+        background-color: yellow;
+        color: black;
+        font-weight: bolder;
+        padding: 3px;
+        border-radius: 3px;
+      }
+      #factura{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #9dbef0dc;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999999;
+       
+    }
+    #mostrarFactura{
+        width: 100%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    #fact1{
+        background-color: var(--bg);
+        border-radius: 15px;
+        width: 90%;
+        padding: 15px;
+    }
+    summary{
+        font-weight: bold;
+        background-color: rgba(3, 3, 75, 0.39);
+        color: var(--bg);
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .fat{
+        padding: 2px;
+        width: 100%;
+        color: #09032b;
+        font-weight: bold;
+      
+    }
+    details{
+        margin-bottom: 5px;
+    }
+    #reciboFactura{
+        display: none;
+    }
+
+    /*reloj*/
+ 
+    
+    .clock-container {
+        text-align: center; /* Centra el texto dentro del contenedor */
+    }
+    
+    .clock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra los elementos dentro del reloj */
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada para el efecto digital */
+        font-size: 14px; /* Tamaño de fuente grande para el reloj */
+        color: #dacfcf; /* Color del texto */
+        background-color: #222; /* Fondo del reloj */
+        padding: 2px;
+        border-radius: 10px; /* Bordes redondeados */
+       
+       
+       
+    }
+    
+   
+
+    .label {
+        margin-top: 2px; /* Espacio entre el reloj y la etiqueta */
+        font-size:14px; /* Tamaño de la etiqueta */
+        color: #b3aaaa; /* Color de la etiqueta */
+    }
+    .time{
+        display: flex;
+        flex-direction: row;
+    }

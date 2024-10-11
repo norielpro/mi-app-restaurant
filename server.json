@@ -1,0 +1,249 @@
+[
+   {
+        "nombre": "Noriel",
+        "email":"norielisy@nauta.cu",
+        "tel": "+5352659539",
+        "link": "https://t.me/apknoriel46",
+        "version": "1.0" ,
+        "nuevaversion": "si",
+        "abrir": "8.00" ,
+        "cerrar": "22.00",
+       
+        "precioenvios":[
+                         {
+                         "lugar":"Sin domicilio",
+                         "precio": 0 
+                         },
+                         {
+                            "lugar":"Habana Vieja",
+                            "precio": 200 
+                            },
+                         {
+                            "lugar":"Centro Habana",
+                            "precio": 500 
+                        },
+                        {
+                            "lugar":"Marianao",
+                            "precio": 2000 
+                        }
+                        
+                        
+                        ],
+        "menu":[{
+                    "id": 2,
+                    "producto": "Chuleta de cerdo",
+                    "precio": 1150,
+                    "descripcion": "Chuleta de cerdo",
+                    "agotado":"no",
+                    "img": "assets/platos/cerdo.webp"
+                },
+                {
+                    "id": 3,
+                    "producto": "Fricase de cerdo",
+                    "precio": 1150,
+                    "descripcion": "Posta de pollo frita con chicharritas",
+                    "agotado":"no",
+                    "img": "assets/platos/cerdo.webp"
+                },
+                {
+                    "id": 4,
+                    "producto": "Bistec Uruguayo de Cerdo",
+                    "precio": 1450,
+                    "descripcion": "Plato con pescado, langosta y camarones",
+                    "agotado":"no",
+                    "img": "assets/platos/cerdo.webp"
+                },
+                {
+                    "id": 5,
+                    "producto": "Bistec de cerdo gratinado",
+                    "precio": 1400,
+                    "descripcion": "Bistec de cerdo gratinado con jamon y queso",
+                    "agotado":"no",
+                    "img": "assets/platos/cerdo.webp"
+                },
+                {
+                    "id": 6,
+                    "producto": "Bistec de pollo grille",
+                    "precio": 950,
+                    "descripcion": "Bistec de pollo grille",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 7,
+                    "producto": "Pollo empanado",
+                    "precio": 1000,
+                    "descripcion": "Pollo empanado",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 8,
+                    "producto": "Fajita de Pollo empanado",
+                    "precio": 1000,
+                    "descripcion": "Pollo empanado",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 9,
+                    "producto": "Pollo Gordon Blue ",
+                    "precio": 1350,
+                    "descripcion": "Pollo Gordon Blue",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 10,
+                    "producto": "Fricasé de pollo ",
+                    "precio": 1000,
+                    "descripcion": "Fricasé de pollo ",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 11,
+                    "producto": "Bistec de pollo gratinado",
+                    "precio": 1300,
+                    "descripcion": "Bistec de pollo gratinado con jamon y queso",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 12,
+                    "producto": "Arroz frito sin camaron ",
+                    "precio": 1050,
+                    "descripcion": "Arroz frito sin camaron",
+                    "agotado":"no",
+                    "img": "assets/platos/arrozfrito.webp"
+                },
+                {
+                    "id": 13,
+                    "producto": "Pechuga de pollo grille ",
+                    "precio": 1200,
+                    "descripcion": "Pechuga de pollo grille",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 14,
+                    "producto": "Pechuga empanada ",
+                    "precio": 1350,
+                    "descripcion": "Pechuga empanada",
+                    "agotado":"no",
+                    "img": "assets/platos/pollo.webp"
+                },
+                {
+                    "id": 15,
+                    "producto": "Ropa vieja de cerdo",
+                    "precio": 1100,
+                    "descripcion": "Ropa vieja de cerdo",
+                    "agotado":"no",
+                    "img": "assets/platos/cerdo.webp"
+                },
+                {
+                    "id": 16,
+                    "producto": "Ropa vieja de res",
+                    "precio": 1200,
+                    "descripcion": "Ropa vieja de res",
+                    "agotado":"no",
+                    "img": "assets/platos/res.webp"
+                }],
+        "extras":[
+            {
+                "id": 1,
+                "producto": "Papas fritas",
+                "precio": 560,
+                "descripcion": "Deliciosas papas fritas",
+                "agotado":"no",
+                "img": "assets/platos/papasfritas.webp"
+            },
+            {
+                "id": 2,
+                "producto": "Plátano maduro frito",
+                "precio": 360,
+                "descripcion": "Deliciosos plátanos fritos",
+                "agotado":"no",
+                "img": "assets/platos/platanofrito.webp"
+            },
+            {
+                "id": 3,
+                "producto": "Tostones",
+                "precio": 360,
+                "descripcion": "Deliciosos plátanos fritos",
+                "agotado":"no",
+                "img": "assets/platos/tostones.webp"
+            },
+            {
+                "id": 4,
+                "producto": "Arroz Moro",
+                "precio": 240,
+                "descripcion": "Arroz Moro",
+                "agotado":"no",
+                "img": "assets/platos/moro.webp"
+            },
+            {
+                "id": 5,
+                "producto": "Arroz Blanco",
+                "precio": 210,
+                "descripcion": "Arroz blanco",
+                "agotado":"no",
+                "img": "assets/platos/arroz.webp"
+            }
+            
+        ],
+    "mercado":[
+        {
+            "id": 1,
+            "producto": "Detergente",
+            "precio": 600,
+            "descripcion": "Detergente OMO",
+            "agotado":"no",
+            "img": "assets/platos/papasfritas.webp"
+        },
+        {
+            "id": 2,
+            "producto": "Refresco de Cola",
+            "precio": 750,
+            "descripcion": "Refresco de 1 litro",
+            "agotado":"no",
+            "img": "assets/platos/papasfritas.webp"
+        },
+        {
+            "id": 3,
+            "producto": "Galletas cubanas",
+            "precio": 900,
+            "descripcion": "Galletas cubanas 120 gramos",
+            "agotado":"no",
+            "img": "assets/platos/papasfritas.webp"
+        },
+        {
+            "id": 4,
+            "producto": "Galletas dulces -Oreo-",
+            "precio": 350,
+            "descripcion": "Galletas dulces 60 gramos",
+            "agotado":"no",
+            "img": "assets/platos/papasfritas.webp"
+        },
+        {
+            "id": 5,
+            "producto": "Galletas Marias",
+            "precio": 900,
+            "descripcion": "Galletas Marias ",
+            "agotado":"no",
+            "img": "assets/platos/papasfritas.webp"
+        },
+        {
+            "id": 6,
+            "producto": "Jaba de Pan 10/uds",
+            "precio": 350,
+            "descripcion": "Panes cubanos, frescos",
+            "agotado":"no",
+            "img": "assets/platos/papasfritas.webp"
+        }
+
+    ]
+    }
+    
+
+]
