@@ -1,12 +1,16 @@
-fetch('server.json')
+const url ="https://api.npoint.io/07398a21678712e587a4"
+const comp= " https://api.npoint.io/07398a21678712e587a4"
+const local = "server.json"
+
+fetch(url)
 .then(function(res){
-  document.getElementById("load").style.display= "flex"
+  document.getElementById("presenta").style.display= "flex"
   if(!res.ok){
     throw new error(console.log('Hubo un error'+ res.statusText));
     //alert("Hubo un problema al cargar los datos")
   }else{
     if(res.ok){
-document.getElementById("load").style.display = 'none' 
+document.getElementById("presenta").style.display = 'none' 
 return res.json();
 }
   }
@@ -20,7 +24,7 @@ localStorage.setItem("datosIniciales", JSON.stringify(data))
 
 })
 .finally(()=>{
-   document.getElementById("load").style.display = 'none' 
+   document.getElementById("presenta").style.display = 'none' 
   pizzas()
   entrantes()
  
@@ -42,13 +46,14 @@ function pizzas(){
    datos.menu.forEach(menu =>{
    //console.log(menu.id)
    html +=`
- <li class="ui" onClick="document.getElementById('popup').style.display='flex',document.getElementById('nP').innerHTML='${menu.producto}',document.getElementById('dP').innerHTML='${menu.descripcion}', document.getElementById('precio').innerHTML='${menu.precio}'" >
+ <li class='ui' id=${menu.agotado} onClick="document.getElementById('popup').style.display='flex',document.getElementById('nP').innerHTML='${menu.producto}',document.getElementById('dP').innerHTML='${menu.descripcion}', document.getElementById('precio').innerHTML='${menu.precio}'" >
   <div>
-  <img src=${menu.img} width="80px" id='imgP' alt=${menu.producto}>
+  <img src=${menu.img} loading="lazy" width="80px" id='imgP' alt=${menu.producto}>
   </div>
    <div id="nombrePrecio">
   <h4 id='nProducto'>${menu.producto}</h4>
   <h4 id="nPa">$ ${menu.precio} cup</h4> 
+  <h4 class=${menu.agotado} id="agotado">Producto Agotado</h4> 
    </div>
    </li>
   <hr>
@@ -72,13 +77,14 @@ function pizzas(){
    datos.extras.forEach(extras =>{
    //console.log(menu.id)
    html +=`
-<li class="ui" onClick="document.getElementById('popup').style.display='flex',document.getElementById('nP').innerHTML='${extras.producto}',document.getElementById('dP').innerHTML='${extras.descripcion}', document.getElementById('precio').innerHTML='${extras.precio}'">
+<li class="ui" id=${extras.agotado} onClick="document.getElementById('popup').style.display='flex',document.getElementById('nP').innerHTML='${extras.producto}',document.getElementById('dP').innerHTML='${extras.descripcion}', document.getElementById('precio').innerHTML='${extras.precio}'">
    <div>
-  <img src=${extras.img} width="80px" id='imgP' alt=${extras.producto}>
+  <img src=${extras.img} loading="lazy" width="80px" id='imgP' alt=${extras.producto}>
    </div>
    <div id="nombrePrecio">
   <h4 id='nProducto'>${extras.producto}</h4>
   <h4 id="nPa">$ ${extras.precio} cup</h4> 
+  <h4 class=${extras.agotado} id="agotado">Producto Agotado</h4> 
    </div>
   </a>
   
@@ -105,14 +111,19 @@ function mercado(){
    datos.mercado.forEach(extras =>{
    //console.log(menu.id)
    html +=`
-<li class="ui" onClick="document.getElementById('popup').style.display='flex',document.getElementById('nP').innerHTML='${extras.producto}',document.getElementById('dP').innerHTML='${extras.descripcion}', document.getElementById('precio').innerHTML='${extras.precio}'">
-   <div>
-  <img src=${extras.img} width="80px" id='imgP' alt=${extras.producto}>
-   </div>
-   <div id="nombrePrecio">
+<li class="ui" id=${extras.agotado} onClick="document.getElementById('popup').style.display='flex',document.getElementById('nP').innerHTML='${extras.producto}',document.getElementById('dP').innerHTML='${extras.descripcion}', document.getElementById('precio').innerHTML='${extras.precio}'">
+ 
+<div>
+  <img src=${extras.img} loading="lazy" width="80px" id='imgP' alt=${extras.producto}>
+</div>
+
+<div id="nombrePrecio">
   <h4 id='nProducto'>${extras.producto}</h4>
   <h4 id="nPa">$ ${extras.precio} cup</h4> 
-   </div>
+
+<h4 class=${extras.agotado} id="agotado">Producto Agotado</h4> 
+
+</div>
   </a>
   
   </li>

@@ -1,6 +1,6 @@
 [
    {
-        "nombre": "Noriel",
+        "nombre": "https://api.npoint.io/07398a21678712e587a4",
         "email":"norielisy@nauta.cu",
         "tel": "+5352659539",
         "link": "https://t.me/apknoriel46",
@@ -21,11 +21,8 @@
                          {
                             "lugar":"Centro Habana",
                             "precio": 500 
-                        },
-                        {
-                            "lugar":"Marianao",
-                            "precio": 2000 
                         }
+                    
                         
                         
                         ],
@@ -82,7 +79,7 @@
                     "producto": "Fajita de Pollo empanado",
                     "precio": 1000,
                     "descripcion": "Pollo empanado",
-                    "agotado":"no",
+                    "agotado":"si",
                     "img": "assets/platos/pollo.webp"
                 },
                 {
@@ -171,7 +168,7 @@
                 "producto": "Tostones",
                 "precio": 360,
                 "descripcion": "Deliciosos plátanos fritos",
-                "agotado":"no",
+                "agotado":"si",
                 "img": "assets/platos/tostones.webp"
             },
             {
@@ -199,7 +196,7 @@
             "precio": 600,
             "descripcion": "Detergente OMO",
             "agotado":"no",
-            "img": "assets/platos/papasfritas.webp"
+            "img": "assets/mercado/detergente.webp"
         },
         {
             "id": 2,
@@ -207,23 +204,16 @@
             "precio": 750,
             "descripcion": "Refresco de 1 litro",
             "agotado":"no",
-            "img": "assets/platos/papasfritas.webp"
+            "img": "assets/mercado/cola.webp"
         },
-        {
-            "id": 3,
-            "producto": "Galletas cubanas",
-            "precio": 900,
-            "descripcion": "Galletas cubanas 120 gramos",
-            "agotado":"no",
-            "img": "assets/platos/papasfritas.webp"
-        },
+       
         {
             "id": 4,
             "producto": "Galletas dulces -Oreo-",
             "precio": 350,
             "descripcion": "Galletas dulces 60 gramos",
             "agotado":"no",
-            "img": "assets/platos/papasfritas.webp"
+            "img": "assets/mercado/galletas.webp"
         },
         {
             "id": 5,
@@ -231,7 +221,7 @@
             "precio": 900,
             "descripcion": "Galletas Marias ",
             "agotado":"no",
-            "img": "assets/platos/papasfritas.webp"
+            "img": "assets/mercado/marias.webp"
         },
         {
             "id": 6,
@@ -239,7 +229,7 @@
             "precio": 350,
             "descripcion": "Panes cubanos, frescos",
             "agotado":"no",
-            "img": "assets/platos/papasfritas.webp"
+            "img": "assets/mercado/pan.webp"
         }
 
     ]

@@ -69,7 +69,7 @@ function saludarCliente() {
     }   
     if(ahora.isBetween(mediodia, tardenoche, null, '[]')){
         const nombreCliente = JSON.parse (localStorage.getItem("dataBro"))
-       document.getElementById("saludarCliente").innerText = "Que bueno verte esta tarde"+ " "+ nombreCliente.nombre  
+       //document.getElementById("saludarCliente").innerText = "Que bueno verte esta tarde"+ " "+ nombreCliente.nombre  
     }   
     if(ahora.isBetween(tardenoche,noche, null, '[]')){
         const nombreCliente = JSON.parse (localStorage.getItem("dataBro"))
@@ -450,3 +450,35 @@ function Esconderrecibo(){
       }
     });
   }
+
+  //validar el numero de telefono
+  function verificarNumeroCuba(numero) {
+    // Expresión regular para validar números cubanos
+    const regexCuba = /^(5\d{7}|63\d{6})$/;
+    return regexCuba.test(numero);
+}
+
+function proceso() {
+ 
+    const phoneNumber = document.getElementById("telefono").value;
+
+    if (!verificarNumeroCuba(phoneNumber)) {
+        document.getElementById("telefono").value= ''
+       Toastify({
+            text: "El número ingresado no es un número válido de Cuba.",
+            duration: 3000,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+        }).showToast();
+        
+    } else {
+        Toastify({
+            text: "Número válido.",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+    }
+}

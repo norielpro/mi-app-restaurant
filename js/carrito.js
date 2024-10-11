@@ -188,35 +188,36 @@ function verdatos(){
  const data = datos
 
  if (data === 'nombre' ){
-  Swal.fire({
-    icon:'warning',
-    text:'Recuerda debes rellenar tus datos personales para hacer efectiva la compra',
-    title:detalle,
-      });
+  Toastify({
+    text:"Debes rellenar tus datos personales" ,
+    duration: 3000,
+    gravity: "bottom",
+    position: "center",
+    style: {
+      background: "#2F71D6",
+    },
+    }).showToast();
+ 
  }
  if (data === 'listo' ){
   const datosQ= JSON.parse(localStorage.getItem('dataBro'))
   const dataCliente = `Bienvenido ${datosQ.nombre}`
-  const check = document.getElementById('check')
+  Toastify({
+    text: dataCliente,
+    duration: 3000,
+    gravity: "bottom",
+    position: "center",
+    style: {
+      background: "#2F71D6",
+    },
+    }).showToast();
  
-  Swal.fire({
-    icon:'info',
-    text:'Disfruta de nuestra comida',
-    title:dataCliente,
-      });
+
  }
  }
 
- document.addEventListener('DOMContentLoaded', function() {
-  // Tu código aquí se ejecutará una vez que el DOM esté completamente cargado
- // document.getElementById('lafecha').innerText = moment().format('lll')
-  console.log('El DOM ha sido completamente cargado y analizado.');
-  
-  // Puedes llamar a otras funciones o inicializar tu aplicación aquí
-//recordarCarrito();
 
-});
-//setInterval(fecha, 60000)
+
 function fecha(){
 const fechaactual= moment().format('lll')
 //document.getElementById('lafecha').innerText = fechaactual
@@ -236,6 +237,7 @@ datos.forEach(datos => {
 html +=`
  <p><b>${precioenvio.lugar}</b> <span>${precioenvio.precio}</span> </p>
 `
+
  Swal.fire({
     title: "Costo del envío",
     html: html,

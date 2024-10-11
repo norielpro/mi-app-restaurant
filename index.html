@@ -17,6 +17,13 @@
 </head>
 
 <body>
+    <div class="presenta" id="presenta">
+        <img src="assets/fondo3.webp" alt="fondo">
+        <div id="inferior">
+            <h1>Las Gallegas</h1>
+            <p>Restaurante y Mercado</p>
+        </div>
+        </div>
 <div class="container-image" id="top">
 <h1 id="t1">Inicio</h1> 
 <div id="iconos">
@@ -45,7 +52,7 @@
     <!--Inicio-->   
    <div class="mostrador animate__animated animate__fadeIn" id="Inicio" >
 <div>
-   <h4 id="saludarCliente"></h4>
+  
 
 </div>
 <!--<div class="carusel">
@@ -125,7 +132,7 @@
 <label for="nombre">Nombre:</label>
 <input type="text" id="nombre" name="nombre"  required>
  <label for="telefono">Teléfono:</label>
- <input type="number" id="telefono" name="telefono" maxlength="6" required>
+ <input type="number" id="telefono" name="telefono" onblur="proceso()" maxlength="8" required>
   <label for="direccion">Dirección:</label>
  <input type="text" id="direccion" name="direccion" required>
  <input type="button" id="guardar" onclick="datosCliente()" value="Guardar">
@@ -267,6 +274,8 @@
     <a href="#" id="noint"> Cerrado
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-watch-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h5a3 3 0 0 1 3 3v5m-.89 3.132a2.99 2.99 0 0 1 -2.11 .868h-6a3 3 0 0 1 -3 -3v-6c0 -.817 .327 -1.559 .857 -2.1" /><path d="M9 18v3h6v-3" /><path d="M9 5v-2h6v3" /><path d="M3 3l18 18" /></svg></a>
 </div> 
+
+
 <script src="js/inicio.js"></script> 
      <script src="js/panes.js"></script>
     <script src="js/script.js"></script>
