@@ -5,9 +5,10 @@ const local = "server.json"
 fetch(url)
 .then(function(res){
   document.getElementById("presenta").style.display= "flex"
-  if(!res.ok){
+  if(!res.ok){ 
+    document.getElementById("errorI").innerText= "Ocurrió un error cargando el menú"
     throw new error(console.log('Hubo un error'+ res.statusText));
-    //alert("Hubo un problema al cargar los datos")
+     
   }else{
     if(res.ok){
 document.getElementById("presenta").style.display = 'none' 
@@ -24,7 +25,7 @@ localStorage.setItem("datosIniciales", JSON.stringify(data))
 
 })
 .finally(()=>{
-   document.getElementById("presenta").style.display = 'none' 
+   
   pizzas()
   entrantes()
  
