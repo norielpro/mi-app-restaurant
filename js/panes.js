@@ -2,7 +2,7 @@ const url ="https://api.npoint.io/07398a21678712e587a4"
 const comp= " https://api.npoint.io/07398a21678712e587a4"
 const local = "server.json"
 
-fetch(url)
+fetch(local)
 .then(function(res){
   document.getElementById("presenta").style.display= "flex"
   if(!res.ok){ 
@@ -107,7 +107,7 @@ function mercado(){
  localStorage.setItem("numTel", datos.tel)
  localStorage.setItem("horarioA", datos.abrir)
  localStorage.setItem("horarioC", datos.cerrar)
- document.getElementById("abre").innerText= localStorage.getItem("horarioA")
+ //document.getElementById("abre").innerText= localStorage.getItem("horarioA")
  document.getElementById("elcierre").innerText= localStorage.getItem("horarioC")
    datos.mercado.forEach(extras =>{
    //console.log(menu.id)

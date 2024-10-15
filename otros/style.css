@@ -224,7 +224,7 @@ body {
         flex-direction: row;
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: 25px;
         gap: 10px;
     }
     #t1{
@@ -615,15 +615,19 @@ justify-content: center;
     
     .clock {
         display: flex;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        z-index: 6;
         flex-direction: column;
         justify-content: center; /* Centra los elementos dentro del reloj */
         align-items: center;
         font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada para el efecto digital */
         font-size: 14px; /* Tamaño de fuente grande para el reloj */
-        color: #dacfcf; /* Color del texto */
-        background-color: #222; /* Fondo del reloj */
+        color: #ffffff; /* Color del texto */
+        background-color: #320be05d; /* Fondo del reloj */
         padding: 2px;
-        border-radius: 10px; /* Bordes redondeados */
+        border-radius: 0px 0px 10px 0px; /* Bordes redondeados */
        
        
        
@@ -638,7 +642,7 @@ justify-content: center;
     }
     .time{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     .presenta{
         display: flex;

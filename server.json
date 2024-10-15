@@ -1,13 +1,13 @@
 [
    {
-        "nombre": "https://api.npoint.io/07398a21678712e587a4",
+        "nombre": "noriel",
         "email":"norielisy@nauta.cu",
         "tel": "+5352659539",
         "link": "https://t.me/apknoriel46",
         "version": "1.0" ,
         "nuevaversion": "si",
-        "abrir": "8.00" ,
-        "cerrar": "22.00",
+        "abrir": "8" ,
+        "cerrar": "22",
        
         "precioenvios":[
                          {

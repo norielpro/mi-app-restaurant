@@ -78,7 +78,7 @@ function saludarCliente() {
     }
    
 }
-document.addEventListener("DOMContentLoaded", saludarCliente)
+//document.addEventListener("DOMContentLoaded", saludarCliente)
 document.addEventListener("DOMContentLoaded", nueva) 
 
 let form = localStorage.getItem("envio")   
