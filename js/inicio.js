@@ -358,14 +358,18 @@ function enviarFactura(){
     const productoscarrito=JSON.parse (localStorage.getItem("productosPanes"))
     let textoW =''
     let textoFact =''
-    productoscarrito.forEach(function(p){
-        textoW += `*Producto*%20${p.producto}%20/*Cantidad*:%20${p.cantidad}%20/%20*Precio:*%20${p.precio}*%0A%0A`
+    const mensaje = productoscarrito.map((producto, index) => {
+        return `${index + 1}. ${producto.nombre} - ${p.cantidad} - ${producto.precio} CUP`;
+    }).join('%0A');
+
+   productoscarrito.forEach(function(p){
+      //  textoW += `*Producto:*%20${p.producto}%20/*Cantidad*:%20${p.cantidad}%20/%20*Precio:*%20${p.precio}%0A%0A`
         textoFact += `<p><b>Producto:</b>${p.producto}<b>Cantidad:</b>${p.cantidad}<b>Precio:</b>${p.precio}</p></br> `
       })
     let mensajeFactura= ''
     mensajeFactura = `*Orden:*%20${id}%0A*Nombre:*%20${nombre}%0A*Tel:*%20${numTel}%0A*Sub-Total:*%20${total}%0A*Envio:*%20${costoEnvio}%0A*Total+Envio:*%20${totalC}%0A`
    
-    const textoFinal= textoW+mensajeFactura
+    const textoFinal= mensaje +mensajeFactura
     const botonWa= document.getElementById("wa")
 //nueva referencia de watsapp
 //botonWa= `https://wa.me/${numeroTel}?text=Hola,%20me%20gustaría%20realizar%20un%20pedido%20de%20.%20Aquí%20están%20los%20detalles:%0A-%20${textoW}%20${nombre}%0A-%20${numTel}%0A-%20${}`
