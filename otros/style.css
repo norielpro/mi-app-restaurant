@@ -260,14 +260,17 @@ body {
     }
     #divCarrito{
         display: none;
+        flex-direction: column;
         width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
+        height: 100vh;
+        
         top: 0;
         background-color: var(--bg);
         z-index: 99999999;
 
+    }
+    #navCarrito{
+        padding: 10px;
     }
     #guardar{
         display: flex;
@@ -290,14 +293,14 @@ body {
         margin-bottom: 10px;
     }
     .badge{
-        background-color: #c2c7c9;
+        background-color: #1b7497b4;
         width: auto;
         height: auto;
         padding: 10px;
      margin: 5px;
      border-radius: 15px;
      text-decoration: none;
-     color: #3b3838;
+     color: #ffffff;
      font-size: 12px;
      position: sticky;
      
@@ -441,18 +444,7 @@ color: yellow;
         font-style: normal;
     }
     
-    #divCarrito{
-        display: none;
-        justify-content: center;
-        
-        background-color:var(--bg);
-        backdrop-filter: blur;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 99999999;
-    }
+   
     #eleCarrito{
         width: 95%;
         background-color: var(--bg);
@@ -538,7 +530,8 @@ justify-content: center;
         padding: 5px;
       }
       .datosCarrito{
-        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
       #mySelect{
         padding: 8px;
@@ -561,9 +554,20 @@ justify-content: center;
       #factura{
         display: none;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #9dbef0dc;
+      
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999999;
+       
+    }
+    #envios{
+        display: none;
+        flex-direction: column;
+      
+        background-color: #ffffff;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -580,6 +584,7 @@ justify-content: center;
         justify-content: center;
     }
     #fact1{
+    
         background-color: var(--bg);
         border-radius: 15px;
         width: 90%;
@@ -703,3 +708,51 @@ justify-content: center;
     #si{
         display: none;
     }
+
+
+    .curved {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+       background: #2c3e50;
+        width: 100%;
+        height: 20vh;
+        border-bottom-left-radius: 50% 32%;
+        border-bottom-right-radius: 50% 32%;
+       
+      }
+      #factSvg{
+        text-align: center;
+      }
+      #close{
+        position: absolute;
+        top: 0;
+        left: 20px;
+
+      }
+      .mostrar{
+        animation: fadeIn;
+      }
+      .cerrar{
+        animation: fadeOut;
+      }
+      #mostrarEnvio{
+        padding: 10px;
+      }
+      #user{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      #modoEnvio{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;   
+        align-items: center;
+        padding: 5px;
+      }
+      #til{
+        width: 100%;
+      }

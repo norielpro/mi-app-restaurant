@@ -293,7 +293,7 @@ opt.forEach(function(opt){
 
        const htmlCarrito =`
     <div class='datosCarrito'>  
-    <h5 class='ui-bar ui-bar-c ui-corner-all' data-theme="e">Datos del Cliente</h5>
+    <h5 class='ui'>Datos del Cliente</h5>
     <p ><b>Orden#:</b><span id='tokenE'>${localStorage.getItem("token")}</span></p>
     <p ><b>Cliente:</b> <span id='nombreE'>${cliente.nombre}</span> </p>
     <p><b>Tel:</b><span id='telE'> ${cliente.telefono}</span></p>
@@ -301,16 +301,19 @@ opt.forEach(function(opt){
     <p id='costoEnvio'><b>Costo de Envio:</b> $<span id="recogida"></span>cup </p>
     <p id="totalC"><b>Total + Envio:</b> <span id='totalE'>$ <span id='totalEnvio'></span> cup</span></p>
      </div> 
-     
-  
-    <h5 class='ui-bar ui-bar-c ui-corner-all' >Tipo de envio</h5>
+      <hr>
+    
+    <div id='modoEnvio'>
+    <h5 id='til'>Elegir modo de envio</h5>
     <form id='formEnvio'>
      <select id="mySelect">
       ${htmlopt}
      </select>
     
-<button type="button" id="wa2" onclick='opt1();enviarFactura()'>Confirmar</button>
+<button type="button" id="wa2" onclick='opt1();enviarFactura()'>Confirmar Orden</button>
     </form>
+     </div>
+     </br>
     <hr>
   <div class='botones'>
  <a  class="ui-btn" id="wa" href="#" target='_blank'>Procesar x Whatsapp <i class="icofont-whatsapp"> </i></a>
@@ -364,6 +367,10 @@ function enviarFactura(){
    
     const textoFinal= textoW+mensajeFactura
     const botonWa= document.getElementById("wa")
+//nueva referencia de watsapp
+botonWa= `https://wa.me/${numeroTel}?text=Hola,%20me%20gustaría%20realizar%20un%20pedido%20de%20.%20Aquí%20están%20los%20detalles:%0A-%20Producto:%20Chuleta%20de%20cerdo%0A-%20Cantidad:%201%0A-%20Precio:%201150%20CUP%0A-%20Subtotal:%201150%20CUP%0A-%20Envío:%20200%20CUP%0A-%20Total:%201350%20CUP%0A-%20Nombre:%20Noriel%0A-%20Teléfono:%2053044022%0A-%20Fecha%20de%20Orden:%2010/16/2024`
+//se caba
+
     botonWa.href = `https://api.whatsapp.com/send?phone=${numeroTel}&text=${textoFinal} `
     botonWa.style.display= "block"
      
@@ -415,6 +422,9 @@ function mostrarFactura(){
 }
 function cerrarFactura(){
     document.getElementById("factura").style.display = "none"
+}
+function cerrarEnvio(){
+    document.getElementById("envios").style.display = "none"
 }
 
 function Verrecibo(){
@@ -481,4 +491,25 @@ function proceso() {
             backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
         }).showToast();
     }
+}
+
+
+function mostrarEnvio(){
+    document.getElementById("envios").style.display = "flex"
+    let htmlEnvio=''
+    const dataEnvio =JSON.parse(localStorage.getItem("datosIniciales"))
+  console.log(dataEnvio)
+
+  dataEnvio.forEach( data=>{
+    data.precioenvios.forEach(p=>{
+        htmlEnvio +=`
+         <tr>
+             <td>${p.lugar}</td>
+             <td>${p.precio}</td>
+        </tr>
+        `
+    })
+  })
+
+ document.getElementById("mostrarEnvioT").innerHTML= htmlEnvio
 }
