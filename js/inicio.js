@@ -359,9 +359,9 @@ function enviarFactura(){
     let textoW =''
     let textoFact =''
     const mensaje = productoscarrito.map((producto, index) => {
-        return `${index + 1}. ${producto.nombre} - ${producto.cantidad} - ${producto.precio} CUP`;
+        return `${index + 1}. ${producto.producto} - ${producto.cantidad} - ${producto.precio} CUP`;
     }).join('%0A');
-
+console.log(mensaje)
    productoscarrito.forEach(function(p){
       //  textoW += `*Producto:*%20${p.producto}%20/*Cantidad*:%20${p.cantidad}%20/%20*Precio:*%20${p.precio}%0A%0A`
         textoFact += `<p><b>Producto:</b>${p.producto}<b>Cantidad:</b>${p.cantidad}<b>Precio:</b>${p.precio}</p></br> `
