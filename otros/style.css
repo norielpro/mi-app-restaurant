@@ -264,7 +264,7 @@ body {
         width: 100%;
         height: auto;
         
-        top: 0;
+        top: -5px;
         background-color: var(--bg);
         z-index: 99999999;
 
@@ -664,7 +664,7 @@ justify-content: center;
     }
     .presenta img{
         width: 100%; /* Asegura que la imagen ocupe todo el ancho del slide */
-        height: auto; /* Mantiene la proporción de la imagen */
+        top:20px; /* Mantiene la proporción de la imagen */
         object-fit: cover;
     }
     .presenta ::after{
