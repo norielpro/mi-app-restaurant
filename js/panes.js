@@ -2,7 +2,7 @@ const url ="https://api.npoint.io/07398a21678712e587a4"
 const comp= " https://api.npoint.io/07398a21678712e587a4"
 const local = "server.json"
 
-fetch(urla)
+fetch(url)
 .then(function(res){
   document.getElementById("presenta").style.display= "flex"
   if(!res.ok){ 
