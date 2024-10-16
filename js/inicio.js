@@ -367,7 +367,7 @@ console.log(mensaje)
         textoFact += `<p><b>Producto:</b>${p.producto}<b>Cantidad:</b>${p.cantidad}<b>Precio:</b>${p.precio}</p></br> `
       })
     let mensajeFactura= ''
-    mensajeFactura = `*Orden:*%20${id}%0A*Nombre:*%20${nombre}%0A*Tel:*%20${numTel}%0A*Sub-Total:*%20${total}%0A*Envio:*%20${costoEnvio}%0A*Total+Envio:*%20${totalC}%0A`
+    mensajeFactura = `%0A%20*Orden:*%20${id}%0A*Nombre:*%20${nombre}%0A*Tel:*%20${numTel}%0A*Sub-Total:*%20${total}%0A*Envio:*%20${costoEnvio}%0A*Total+Envio:*%20${totalC}%0A`
    
     const textoFinal="*Factura*%20%0A"+mensaje+mensajeFactura
     const botonWa= document.getElementById("wa")
