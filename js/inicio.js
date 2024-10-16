@@ -359,16 +359,16 @@ function enviarFactura(){
     let textoW =''
     let textoFact =''
     productoscarrito.forEach(function(p){
-        textoW += `*Producto:*${p.producto}/*Cantidad*:${p.cantidad}/*Precio:*${p.precio}*%0A `
+        textoW += `*Producto*%20${p.producto}%20/*Cantidad*:%20${p.cantidad}%20/%20*Precio:*%20${p.precio}*%0A%0A`
         textoFact += `<p><b>Producto:</b>${p.producto}<b>Cantidad:</b>${p.cantidad}<b>Precio:</b>${p.precio}</p></br> `
       })
     let mensajeFactura= ''
-    mensajeFactura = `*Orden:*${id}%0A*Nombre:*${nombre}%0A*Tel:*${numTel}%0A*Sub-Total:*${total}%0A*Envio:*${costoEnvio}%0A*Total+Envio:*${totalC}%0A`
+    mensajeFactura = `*Orden:*%20${id}%0A*Nombre:*%20${nombre}%0A*Tel:*%20${numTel}%0A*Sub-Total:*%20${total}%0A*Envio:*%20${costoEnvio}%0A*Total+Envio:*%20${totalC}%0A`
    
     const textoFinal= textoW+mensajeFactura
     const botonWa= document.getElementById("wa")
 //nueva referencia de watsapp
-botonWa= `https://wa.me/${numeroTel}?text=Hola,%20me%20gustaría%20realizar%20un%20pedido%20de%20.%20Aquí%20están%20los%20detalles:%0A-%20Producto:%20Chuleta%20de%20cerdo%0A-%20Cantidad:%201%0A-%20Precio:%201150%20CUP%0A-%20Subtotal:%201150%20CUP%0A-%20Envío:%20200%20CUP%0A-%20Total:%201350%20CUP%0A-%20Nombre:%20Noriel%0A-%20Teléfono:%2053044022%0A-%20Fecha%20de%20Orden:%2010/16/2024`
+//botonWa= `https://wa.me/${numeroTel}?text=Hola,%20me%20gustaría%20realizar%20un%20pedido%20de%20.%20Aquí%20están%20los%20detalles:%0A-%20${textoW}%20${nombre}%0A-%20${numTel}%0A-%20${}`
 //se caba
 
     botonWa.href = `https://api.whatsapp.com/send?phone=${numeroTel}&text=${textoFinal} `
