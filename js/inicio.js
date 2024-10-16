@@ -369,7 +369,7 @@ console.log(mensaje)
     let mensajeFactura= ''
     mensajeFactura = `*Orden:*%20${id}%0A*Nombre:*%20${nombre}%0A*Tel:*%20${numTel}%0A*Sub-Total:*%20${total}%0A*Envio:*%20${costoEnvio}%0A*Total+Envio:*%20${totalC}%0A`
    
-    const textoFinal=`*Factura*%20%0A${mensaje}${mensajeFactura}`
+    const textoFinal="*Factura*%20%0A"+mensaje+mensajeFactura
     const botonWa= document.getElementById("wa")
 //nueva referencia de watsapp
 //botonWa= `https://wa.me/${numeroTel}?text=Hola,%20me%20gustaría%20realizar%20un%20pedido%20de%20.%20Aquí%20están%20los%20detalles:%0A-%20${textoW}%20${nombre}%0A-%20${numTel}%0A-%20${}`
