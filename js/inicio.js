@@ -417,6 +417,7 @@ function mostrarFactura(){
       <hr>
 <br>
       <input type="button" value="Borrar" id='wa5' onClick='smsBorrarFactura()'>
+       <input type="button" value="Reclamar" id='wa6' onClick='reclamo()'>
      </div>
      
      `  
