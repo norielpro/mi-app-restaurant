@@ -535,6 +535,18 @@ justify-content: center;
         text-align: center;
         border: none;
       }
+      #wa8{
+        background-color: rgb(85, 95, 240);
+        color: var(--nav-bg);
+        font-size: medium;
+        padding: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: lighter;
+        width: auto;
+        text-align: center;
+        border: none;
+      }
       .botones{
         display: flex;
         flex-direction: column;
@@ -589,6 +601,37 @@ justify-content: center;
         height: 100%;
         z-index: 99999999;
        
+    }
+    #rec{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        background-color: #ffffff;
+        margin: 0;
+         top: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 999999999;
+       
+    }
+    #mostrarRec{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      padding: 15px;
+        margin-top: 21vh;
+    }
+    #formRec{
+        display: flex;
+        flex-direction: column;
+         gap: 10px;
+    }
+    #textoReclamo{
+        padding: 10px;
+        border-radius: 15px;
+        border: 1px solid rgba(105, 103, 103, 0.486);
     }
     #mostrarFactura{
         width: 100%;

@@ -316,7 +316,7 @@ opt.forEach(function(opt){
      </br>
     <hr>
   <div class='botones'>
- <a  class="ui-btn" id="wa" href="#" target='_blank'>Procesar x Whatsapp <i class="icofont-whatsapp"> </i></a>
+ <a  class="ui-btn" id="wa" href="#" target='_blank'>Procesar x Whatsapp <i><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg> </i></a>
 
     <!--<a  class="ui-btn" id="wa" href="https://api.whatsapp.com/send?phone=${numTel}&text=*Pedido:*%0A+${textoW}%0A+*Total a Pagar*%0A+ ${pTotal} +*Nombre del Cliente*%0A +${cliente.nombre}+*Telef.*%0A + ${cliente.telefono}+*Direccion*%0A + ${cliente.direccion}+ *Fecha del Ticket de compra*%0A + ${fechaCarrito}" >Procesar x Whatsapp <i class="icofont-whatsapp"> </i></a>-->
     
@@ -403,9 +403,9 @@ function mostrarFactura(){
      <h2>Factura</h2>
      <hr>
     <p class='fat'>Orden No.</p>
-     <p>${data.id}</p>
+     <p id='nRec'>${data.id}</p>
       <p class='fat'>A Nombre de</p>
-     <p>${data.nombre}</p>
+     <p id='nFact'>${data.nombre}</p>
      <p class='fat'>Sub-Total:</p>
     <p>$${data.total} cup</p>
      <p class='fat'>Total a pagar:</p>
@@ -517,4 +517,30 @@ function mostrarEnvio(){
   })
 
  document.getElementById("mostrarEnvioT").innerHTML= htmlEnvio
+}
+function reclamo(){
+    document.getElementById("rec").style.display= 'flex'
+    document.getElementById("factNombre").innerHTML= document.getElementById("nFact").textContent
+    document.getElementById("factReclamo").innerHTML= document.getElementById("nRec").textContent
+}
+function closeRec(){
+    document.getElementById("rec").style.display= 'none'
+}
+
+function enviarReclamo(){
+  const nombre=  document.getElementById("factNombre").textContent
+   const reclamo= document.getElementById("factReclamo").textContent
+   const texto = document.getElementById("textoReclamo").value
+   const boton = document.getElementById("wa8")
+   const fecha = moment().format('llll')
+   const numTel= localStorage.getItem("numTel")
+   let reclamacion ={
+    "nombre": nombre,
+    "reclamo": reclamo,
+    "texto": texto,
+    "fecha": fecha
+   }
+   localStorage.setItem("reclamacionHecha", JSON.stringify(reclamacion))
+   const textoReclama= `*Reclamación*%20%0A*Nombre:*%20${nombre}%0A*Factura:*%20${reclamo}*Fecha:*%20${fecha}%0A*Texto:*%20${texto}`
+   boton.href=`https://api.whatsapp.com/send?phone=${numTel}&text=${textoReclama}`
 }

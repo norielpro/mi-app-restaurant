@@ -300,9 +300,31 @@
       </table>
     </div>
 </div> 
-
-
 <!--termina el envio-->
+<!--aqui va la reclamacion-->
+<div id="rec" class="mostrador animate__animated animate__fadeInUp">
+    <section class="curved">
+        <i onclick="closeRec()" id="close"><svg  xmlns="http://www.w3.org/2000/svg"  width="36"  height="36"  viewBox="0 0 24 24"  fill="#fff"  class="icon icon-tabler icons-tabler-filled icon-tabler-square-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3zm-9.387 6.21l.094 .083l2.293 2.292l2.293 -2.292a1 1 0 0 1 1.497 1.32l-.083 .094l-2.292 2.293l2.292 2.293a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.497 -1.32l.083 -.094l2.292 -2.293l-2.292 -2.293a1 1 0 0 1 1.32 -1.497z" /></svg></i>
+        <i  id="factSvg">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 18l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5" /><path d="M19 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M22 22a2 2 0 0 0 -2 -2h-2a2 2 0 0 0 -2 2" /></svg>
+        </i>
+    </section>
+ <div id="mostrarRec">
+    <h2>Reclamo sobre la factura</h2>
+    <hr>
+    <p>Nombre: <span id="factNombre"></span></p>
+    <p>Factura:<span id="factReclamo"></span></p>
+    
+    <br>
+    <form id="formRec">
+         <textarea name="reclamo" id="textoReclamo" placeholder="Escriba su mensaje..." rows="10"></textarea>
+         <a href="#" id="wa8" onclick="enviarReclamo()" target="_blank">Enviar Reclamo</a>
+    </form>
+ </div>
+
+</div> 
+
+
 <div id="cierre">
     <a href="#" id="noint"> Cerrado
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-watch-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h5a3 3 0 0 1 3 3v5m-.89 3.132a2.99 2.99 0 0 1 -2.11 .868h-6a3 3 0 0 1 -3 -3v-6c0 -.817 .327 -1.559 .857 -2.1" /><path d="M9 18v3h6v-3" /><path d="M9 5v-2h6v3" /><path d="M3 3l18 18" /></svg></a>
